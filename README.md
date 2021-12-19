@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# App intro :)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="https://raw.githubusercontent.com/jacksonkasi0/react-todo-app/master/sppoky.gif" />
+
+
 
 ## Available Scripts
 
