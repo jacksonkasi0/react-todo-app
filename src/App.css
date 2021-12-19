@@ -1,0 +1,124 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 5px;
+}
+
+h1 {
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+}
+
+.inputField {
+  background-color: white;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputField > input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: inherit;
+  width: 80%;
+  font-size: 17px;
+}
+
+.inputField > input::placeholder {
+  padding-left: 5px;
+}
+
+.inputField > button {
+  background-color: rgb(255, 123, 0);
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.itemsContainer {
+  height: 400px;
+  min-width: 40%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  overflow-y: scroll;
+}
+
+.itemsContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  min-height: 30px;
+  margin: 10px 5px;
+  padding: 15px;
+  transition-duration: 100ms;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.todoItem:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.todoItem > p {
+  font-size: 20px;
+}
+.todoItem > i {
+  color: tomato;
+  font-size: 23px;
+  transition-duration: 100ms;
+}
+
+.todoItem > i:hover{
+  color: rgb(255, 60, 0);
+  transform: scale(1.1);
+}
+
+.empty{
+  text-align: center;
+  color: gray;
+  font-size: 40px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  animation: MoveUpDown 1.5s linear infinite;
+}
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 200px;
+  }
+  50% {
+    bottom: 250px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .itemsContainer,
+  .inputField {
+    min-width: 68%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .itemsContainer,
+  .inputField {
+    min-width: 85%;
+  }
+}
